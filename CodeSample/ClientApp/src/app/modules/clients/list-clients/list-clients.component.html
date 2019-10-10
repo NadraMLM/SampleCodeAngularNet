@@ -1,0 +1,11 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let client of clients">
+    <span class="name">{{client.firstName}} {{client.lastName}}</span>
+    <button class="btn btn-default btn-xs float-right remove-item" (click)="goToSave(client.id)">
+      <fa-icon [icon]="faPen" class="success"></fa-icon>
+    </button>
+    <button class="btn btn-default btn-xs float-right remove-item" (click)="confirmDelete(client.id,client.firstName+' '+client.lastName)">
+      <fa-icon [icon]="faUserMinus" class="alert"></fa-icon>
+    </button>
+  </li>
+</ul>
